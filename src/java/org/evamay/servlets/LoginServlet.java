@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
                case "Staff":
                 HttpSession session=request.getSession();
                 session.setAttribute("staff", staff1);
-                String url="/staffUI.jsp";
+                String url="/staff.jsp";
                 RequestDispatcher dispatcher=getServletContext().getRequestDispatcher(url);
                 dispatcher.forward(request,response);
                   
@@ -78,7 +78,7 @@ public class LoginServlet extends HttpServlet {
            else
            {
                String message="invalid login";
-                String url="/login.jsp";
+                String url="/newlogin.jsp";
                 request.setAttribute("message", message);
                 RequestDispatcher dispatcher=getServletContext().
                        getRequestDispatcher(url);

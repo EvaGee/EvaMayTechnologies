@@ -45,7 +45,7 @@ public class AddStaffServlet extends HttpServlet {
             if(StaffIO.insert(staff)>0)
             {
                String message1="Staff successfully registered";
-                String url1="/login.jsp";
+                String url1="/newlogin.jsp";
                 request.setAttribute("message", message1);
 
                 RequestDispatcher dispatcher=getServletContext().
@@ -59,7 +59,7 @@ public class AddStaffServlet extends HttpServlet {
                 request.setAttribute("message", message);
 
                 RequestDispatcher dispatcher=getServletContext().
-                       getRequestDispatcher(url);
+                getRequestDispatcher(url);
                dispatcher.forward(request,response);  
             }
         } catch (ClassNotFoundException ex) {
