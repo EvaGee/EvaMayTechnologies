@@ -79,10 +79,8 @@
                                 <option>Departmental Manager</option>
                             </select>
                         </div>
-                        <div class="login100-form">
-                          <label for="password">Password:</label>
-                          <input type="password" class="input100" name="password" id="password" placeholder="Password" >
-                        </div>
+                        
+                        <input type="hidden" name="password" id="password" value="<%=staffId%>" >
                         <input type="hidden" name="lname" id="lname" value="<%=lname%>" >
                         <input type="hidden" name="fname" id="fname" value="<%=fname%>" >
                         <input type="hidden" name="mname" id="mname" value="<%=mname%>" >
@@ -90,6 +88,7 @@
                         <input type="hidden" name="gender" id="gender" value="<%=gender%>" >
                         <input type="hidden" name="email" id="email" value="<%=email%>" >
                         <input type="hidden" name="phoneNo" id="phoneNo" value="<%=phoneNo%>" >
+                        <input type="hidden" name="remainingDays" id="remainingDays" value="21" >
                             
                          <br>
                         <center>
@@ -102,53 +101,7 @@
                                 <button type="submit" class="login100-form-btn" onclick="history.back()">Back</button>
                            
                         </center>
-                    <script>
-                        function validateForm()                                    
-                            { 
-                                var staffId = document.forms["staff_registration_form"]["staffId"];
-                                var fname = document.forms["staff_registration_form"]["fname"];               
-                                var lname = document.forms["staff_registration_form"]["lname"];
-                                var mname = document.forms["staff_registration_form"]["mname"];
-                                var password = document.forms["staff_registration_form"]["password"];
-
-                                if (staffId.value == "")                                  
-                                { 
-                                    window.alert("Please enter your Staff Number."); 
-                                    staffId.focus(); 
-                                    return false; 
-                                } 
-
-                                if (fname.value == "")                                  
-                                { 
-                                    window.alert("Please enter your First Name."); 
-                                    fname.focus(); 
-                                    return false; 
-                                } 
-                                
-                                if (lname.value == "")                                  
-                                { 
-                                    window.alert("Please enter your Last Name."); 
-                                    lname.focus(); 
-                                    return false; 
-                                } 
-                             
-
-                                if (password.value == "")                        
-                                { 
-                                    window.alert("Please enter your Password."); 
-                                    password.focus(); 
-                                    return false; 
-                                } 
-                                if (password.value != staffId.value) 
-                                {
-
-                                    window.alert("Password do not match Staff Number.");
-                                    return false;
-                                }
-
-                                return true; 
-                            }
-                    </script>
+                    
                     <script>
 document.getElementById('department_select').addEventListener("change", function() {
   var val = this.value;

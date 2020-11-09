@@ -12,7 +12,6 @@ package org.evamay.business;
 public class Leaves {
     private String staffId;
     private String status;
-    private String remainingDays;
     private String days;
     private String leaveType;
     private String startDate;
@@ -22,11 +21,10 @@ public class Leaves {
     public Leaves(){
     }
 
-    public Leaves(String staffId, String status, String remainingDays, String days, String leaveType,
+    public Leaves(String staffId, String status, String days, String leaveType,
                   String startDate, String endDate){
         this.staffId=staffId;
         this.status=status;
-        this.remainingDays=remainingDays;
         this.days=days;
         this.leaveType=leaveType;
         this.startDate=startDate;
@@ -58,20 +56,6 @@ public class Leaves {
      */
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    /**
-     * @return the remainingDays
-     */
-    public String getRemainingDays() {
-        return remainingDays;
-    }
-
-    /**
-     * @param remainingDays the remainingDays to set
-     */
-    public void setRemainingDays(String remainingDays) {
-        this.remainingDays = remainingDays;
     }
 
     /**

@@ -36,6 +36,7 @@ public class AddStaffServlet extends HttpServlet {
         String department=request.getParameter("department");
         String section=request.getParameter("section");
         String designation=request.getParameter("designation");
+        String remainingDays=request.getParameter("remainingDays");
         String password=request.getParameter("password");
 
         
@@ -50,6 +51,7 @@ public class AddStaffServlet extends HttpServlet {
         staff.setDepartment(department);
         staff.setSection(section);
         staff.setDesignation(designation);
+        staff.setRemainingDays(remainingDays);
         staff.setPassword(password);
         
         try {

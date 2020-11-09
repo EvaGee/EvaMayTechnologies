@@ -54,8 +54,8 @@ public class StaffIO {
         String dbName = "employee"; 
         String dbUsername = "root"; 
         String dbPassword = "";
-        String sql="INSERT INTO staffdetails(StaffId, Department, Section,Designation) "
-                                    + "VALUES(?,?,?,?)";
+        String sql="INSERT INTO staffdetails(StaffId, Department, Section,Designation, RemainingDays) "
+                                    + "VALUES(?,?,?,?,?)";
         Class.forName("com.mysql.jdbc.Driver");
          try (Connection con = DriverManager.getConnection(dbURL + dbName, 
              dbUsername,dbPassword); 
@@ -65,6 +65,7 @@ public class StaffIO {
                 st.setString(2, staff.getDepartment());
                 st.setString(3, staff.getSection());
                 st.setString(4, staff.getDesignation());
+                st.setString(5, staff.getRemainingDays());
                 
                  return st.executeUpdate(); 
               }

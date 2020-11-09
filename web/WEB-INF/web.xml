@@ -28,6 +28,18 @@
         <servlet-name>ApplyLeaveServlet</servlet-name>
         <servlet-class>org.evamay.servlets.ApplyLeaveServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AcceptLeavesServlet</servlet-name>
+        <servlet-class>org.evamay.servlets.AcceptLeavesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeclineLeavesServlet</servlet-name>
+        <servlet-class>org.evamay.servlets.DeclineLeavesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddJobServlet</servlet-name>
+        <servlet-class>org.evamay.servlets.AddJobServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -47,6 +59,18 @@
     <servlet-mapping>
         <servlet-name>ApplyLeaveServlet</servlet-name>
         <url-pattern>/ApplyLeaveServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AcceptLeavesServlet</servlet-name>
+        <url-pattern>/AcceptLeavesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeclineLeavesServlet</servlet-name>
+        <url-pattern>/DeclineLeavesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddJobServlet</servlet-name>
+        <url-pattern>/AddJobServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

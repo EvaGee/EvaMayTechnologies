@@ -32,7 +32,6 @@ public class ApplyLeaveServlet extends HttpServlet {
             throws ServletException, IOException {
         String staffId=request.getParameter("staffId");
         String status=request.getParameter("status");
-        String remainingDays=request.getParameter("remainingDays");
         String leaveType=request.getParameter("leaveType");
         String days=request.getParameter("days");
         String startDate=request.getParameter("startDate"); 
@@ -62,7 +61,6 @@ public class ApplyLeaveServlet extends HttpServlet {
         leaves.setDays(days);
         leaves.setEndDate(endDate);
         leaves.setLeaveType(leaveType);
-        leaves.setRemainingDays(remainingDays);
         leaves.setStaffId(staffId);
         leaves.setStartDate(startDate);
         leaves.setStatus(status);
@@ -80,8 +78,8 @@ public class ApplyLeaveServlet extends HttpServlet {
             }
             else
             {
-                String message="This staff number is already registered";
-                String url="/staffRegistration.jsp";
+                String message="Error applying your leave, please try again";
+                String url="/leaveapplication.jsp";
                 request.setAttribute("message", message);
 
                 RequestDispatcher dispatcher=getServletContext().

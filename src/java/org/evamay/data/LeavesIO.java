@@ -12,7 +12,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.evamay.business.Leaves;
-import org.evamay.business.Staff;
 
 
 /**
@@ -26,8 +25,8 @@ public class LeavesIO {
         String dbName = "employee"; 
         String dbUsername = "root"; 
         String dbPassword = "";
-        String sql="INSERT INTO leaves(staffId, status, type, leaveDays, start, end, remainingDays) "
-                                    + "VALUES(?,?,?,?,?,?,?)";
+        String sql="INSERT INTO leaves(staffId, status, type, leaveDays, start, end) "
+                                    + "VALUES(?,?,?,?,?,?)";
         Class.forName("com.mysql.jdbc.Driver");
          try (Connection con = DriverManager.getConnection(dbURL + dbName, 
              dbUsername,dbPassword); 
@@ -39,7 +38,6 @@ public class LeavesIO {
                 st.setString(4, leaves.getDays());
                 st.setString(5, leaves.getStartDate());
                 st.setString(6, leaves.getEndDate()); 
-                st.setString(7, leaves.getRemainingDays());
                 
 
                 return st.executeUpdate(); 

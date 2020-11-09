@@ -21,13 +21,14 @@ public class Staff {
     private String department;
     private String section;
     private String designation;
+    private String remainingDays;
     private String password;
 
     public Staff() {
     }
 
     public Staff(String fname, String lname, String mname, String staffId,String gender, String email, 
-            String phoneNo, String department, String section, String designation, String password) {
+            String phoneNo, String department, String section, String designation, String remainingDays, String password) {
         this.fname = fname;
         this.lname = lname;
         this.mname = mname;
@@ -38,6 +39,7 @@ public class Staff {
         this.department = department;
         this.section = section;
         this.designation = designation;
+        this.remainingDays=remainingDays;
         this.password = password;
     }
 
@@ -193,6 +195,20 @@ public class Staff {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * @return the remainingDays
+     */
+    public String getRemainingDays() {
+        return remainingDays;
+    }
+
+    /**
+     * @param remainingDays the remainingDays to set
+     */
+    public void setRemainingDays(String remainingDays) {
+        this.remainingDays = remainingDays;
     }
 
 }

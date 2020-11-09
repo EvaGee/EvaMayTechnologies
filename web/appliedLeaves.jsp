@@ -74,7 +74,7 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-brand-text accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="staff.jsp">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="supervisorUI.jsp">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-folder"></i>
         </div>
@@ -86,7 +86,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="staff.jsp">
+        <a class="nav-link" href="supervisorUI.jsp">
           <i class="fas fa-list"></i>
           <span>Dashboard</span></a>
       </li>
@@ -146,7 +146,7 @@
        <!-- About Section Content -->
       <%
              Staff staff=(Staff)session.getAttribute("staff");
-             String department=staff.getDepartment();
+             String section=staff.getSection();
              
              
           
@@ -171,8 +171,8 @@
 
                         Class.forName("com.mysql.jdbc.Driver");
                         con = DriverManager.getConnection("jdbc:mysql://localhost/employee","root","");
-                        st = con.prepareStatement("SELECT * FROM leaves JOIN staffdetails USING (staffId) WHERE staffdetails.department=? && staffdetails.designation='staff' && leaves.status='pending'");
-                        st.setString(1,department);
+                        st = con.prepareStatement("SELECT * FROM leaves JOIN staffdetails USING (staffId) WHERE staffdetails.section=? && staffdetails.designation='staff' && leaves.status='pending'");
+                        st.setString(1,section);
                        
                         rs=st.executeQuery();
                         
@@ -180,15 +180,24 @@
                    
                    %>
                    
-                  <tr>                        
+                  <tr>  
+                      
                     <td><%=rs.getString("staffId")%></td>
                     <td><%=rs.getString("type")%></td>
                     <td><%=rs.getString("leavedays")%></td>
                     <td><%=rs.getString("start")%></td>
                     <td><%=rs.getString("end")%></td>
                     <td><%=rs.getString("remainingDays")%></td>
-                    <td><a href="">Accept</a></td>
-                    <td><a href="">Decline </a></td>
+                <form action="viewleaves.jsp" method="post">
+                    <input type="hidden" name="type" value="<%=rs.getString("type")%>">
+                    <input type="hidden" name="staffId" value="<%=rs.getString("staffId")%>">
+                    <input type="hidden" name="leaveDays" value="<%=rs.getString("leavedays")%>">
+                    <input type="hidden" name="start" value="<%=rs.getString("start")%>">
+                    <input type="hidden" name="end" value="<%=rs.getString("end")%>">
+                    <input type="hidden" name="remainingDays" value="<%=rs.getString("remainingDays")%>">
+                    <td><button>View Leaves</button></td>
+                </form>
+                
                   </tr>
                   <%
                         }

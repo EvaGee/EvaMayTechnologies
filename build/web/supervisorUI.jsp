@@ -67,7 +67,7 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-brand-text accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="staff.jsp">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="supervisorUI.jsp">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-folder"></i>
         </div>
@@ -79,7 +79,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="staff.jsp">
+        <a class="nav-link" href="supervisorUI.jsp">
           <i class="fas fa-list"></i>
           <span>Dashboard</span></a>
       </li>

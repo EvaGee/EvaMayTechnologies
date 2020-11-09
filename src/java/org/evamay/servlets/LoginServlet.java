@@ -48,7 +48,6 @@ public class LoginServlet extends HttpServlet {
                switch(designation)
                { 
                case "Staff":
-                
                 String url="/staff.jsp";
                 RequestDispatcher dispatcher=getServletContext().getRequestDispatcher(url);
                 dispatcher.forward(request,response);
@@ -63,6 +62,10 @@ public class LoginServlet extends HttpServlet {
                 RequestDispatcher dispatcher2=getServletContext().getRequestDispatcher(url2);
                 dispatcher2.forward(request,response);
                    
+                case "Hr Manager":
+                String url3="/hrUI.jsp";
+                RequestDispatcher dispatcher3=getServletContext().getRequestDispatcher(url3);
+                dispatcher3.forward(request,response);   
                 }
                
            }

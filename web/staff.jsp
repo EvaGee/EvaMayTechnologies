@@ -11,7 +11,8 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <title>EvaMay Technologies</title>
 
@@ -120,7 +121,7 @@
       <!-- Main Content -->
       <div id="content">
     
-            <section class="page-section bg-gradient-info text-white mb-0" id="about">
+            <section class="page-section bg-info text-white mb-0" id="about">
 
             <div class="container">
 
