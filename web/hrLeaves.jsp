@@ -73,7 +73,7 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-brand-text accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="supervisorUI.jsp">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="hrUI.jsp">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-folder"></i>
         </div>
@@ -85,7 +85,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="supervisorUI.jsp">
+        <a class="nav-link" href="hrUI.jsp">
           <i class="fas fa-list"></i>
           <span>Dashboard</span></a>
       </li>
@@ -101,8 +101,11 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Allowed</a>
-            <a class="collapse-item" href="#">Pending</a>
+            
+            <a class="collapse-item" href="leaveapplication.jsp">Apply A Leave</a>
+            <a class="collapse-item" href="hrLeaves.jsp">Applied Leaves</a>  
+            <a class="collapse-item" href="allowedLeaves.jsp">Allowed Leaves</a>
+            <a class="collapse-item" href="pendingLeaves.jsp">Pending Leaves</a>
             <a class="collapse-item" href="leaveapplication.jsp">Apply A Leave</a>
           </div>
         </div>
@@ -143,13 +146,7 @@
       </div>
 
        <!-- About Section Content -->
-      <%
-             Staff staff=(Staff)session.getAttribute("staff");
-             String department=staff.getDepartment();
-             
-             
-          
-            %>
+     
             <table class="table table-info  container">
                 <thead>
                  <tr>
@@ -171,7 +168,7 @@
                         Class.forName("com.mysql.jdbc.Driver");
                         con = DriverManager.getConnection("jdbc:mysql://localhost/employee","root","");
                         st = con.prepareStatement("SELECT * FROM leaves JOIN staffdetails USING (staffId) WHERE leaves.status='allowed'");
-                        st.setString(1,department);
+                        
                        
                         rs=st.executeQuery();
                         

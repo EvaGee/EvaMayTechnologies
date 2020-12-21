@@ -87,7 +87,6 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
@@ -102,22 +101,33 @@
           </div>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Add employee</span>
+        </a>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+             <a class="collapse-item" href="staffRegistration.jsp">Add Employees </a>  
+            
+          </div>
+        </div>
+      </li>
 
       
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Job Vacancies</span>
         </a>
-        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-             <a class="collapse-item" href="jobVacancies.jsp">Add Job Vacancies </a>  
-            <a class="collapse-item" href="allowedLeaves.jsp">View Applicants</a>
-            <a class="collapse-item" href="pendingLeaves.jsp">Pending Leaves</a>
-            <a class="collapse-item" href="leaveapplication.jsp">Apply A Leave</a>
+             <a class="collapse-item" href="jobvacancy.jsp">Add Job Vacancies </a>  
+            <a class="collapse-item" href="view.jsp">View Applicants</a>
+            
           </div>
         </div>
       </li>

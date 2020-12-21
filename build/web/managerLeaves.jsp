@@ -101,8 +101,9 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Allowed</a>
-            <a class="collapse-item" href="#">Pending</a>
+            <a class="collapse-item" href="managerLeaves.jsp">Applied Leaves</a>  
+            <a class="collapse-item" href="allowedLeaves.jsp">Allowed Leaves</a>
+            <a class="collapse-item" href="pendingLeaves.jsp">Pending Leaves</a>
             <a class="collapse-item" href="leaveapplication.jsp">Apply A Leave</a>
           </div>
         </div>

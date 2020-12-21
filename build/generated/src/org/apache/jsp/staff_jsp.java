@@ -50,7 +50,8 @@ public final class staff_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\n");
       out.write("\n");
       out.write("  <meta charset=\"utf-8\">\n");
-      out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n");
+      out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("\n");
       out.write("\n");
       out.write("  <title>EvaMay Technologies</title>\n");
       out.write("\n");
@@ -137,7 +138,8 @@ public final class staff_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </a>\n");
       out.write("        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\n");
       out.write("          <div class=\"bg-white py-2 collapse-inner rounded\">\n");
-      out.write("            <a class=\"collapse-item\" href=\"#\">Allowed</a>\n");
+      out.write("            <a class=\"collapse-item\" href=\"allowedLeaves.jsp\">Allowed</a>\n");
+      out.write("            <a class=\"collapse-item\" href=\"deniedLeaves.jsp\">Denied</a>\n");
       out.write("            <a class=\"collapse-item\" href=\"pendingLeaves.jsp\">Pending</a>\n");
       out.write("            <a class=\"collapse-item\" href=\"leaveapplication.jsp\">Apply A Leave</a>\n");
       out.write("          </div>\n");
@@ -163,7 +165,7 @@ public final class staff_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <!-- Main Content -->\n");
       out.write("      <div id=\"content\">\n");
       out.write("    \n");
-      out.write("            <section class=\"page-section bg-gradient-info text-white mb-0\" id=\"about\">\n");
+      out.write("            <section class=\"page-section bg-info text-white mb-0\" id=\"about\">\n");
       out.write("\n");
       out.write("            <div class=\"container\">\n");
       out.write("\n");

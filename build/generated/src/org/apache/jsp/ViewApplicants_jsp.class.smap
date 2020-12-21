@@ -1,0 +1,20 @@
+SMAP
+ViewApplicants_jsp.java
+JSP
+*S JSP
+*F
++ 0 ViewApplicants.jsp
+ViewApplicants.jsp
+*L
+5,41:48
+46:89,3
+47:92
+48:93,3
+49,130:96
+179,14:227
+192,4:241
+196,6:245,3
+202,3:263
+205,3:267
+207,44:270
+*E

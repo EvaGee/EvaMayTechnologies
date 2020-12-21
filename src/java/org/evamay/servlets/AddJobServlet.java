@@ -34,6 +34,7 @@ public class AddJobServlet extends HttpServlet {
         String startDate=request.getParameter("startDate"); 
         String endDate=request.getParameter("endDate");
         String qualifications=request.getParameter("qualifications");
+        String duties=request.getParameter("duties");
         
         Vacancies vacancies=new Vacancies();
         vacancies.setDepartment(department);
@@ -43,6 +44,7 @@ public class AddJobServlet extends HttpServlet {
         vacancies.setStartDate(startDate);
         vacancies.setEndDate(endDate);
         vacancies.setQualifications(qualifications);
+        vacancies.setDuties(duties);
         
         try {
             if(VacanciesIO.insert(vacancies)>0)

@@ -108,7 +108,7 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item">
-        <a class="nav-link" href="jobvacancy.jsp">
+        <a class="nav-link" href="home.jsp">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Job Vacancies</span></a>
       </li>

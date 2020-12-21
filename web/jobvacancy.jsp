@@ -81,24 +81,33 @@
                         <div class="login100-form">
                           <label for="startDate">Start Date:</label>
                           <input type="date" class="input100" name="startDate" id="startDate" placeholder="Start Date" required>
-                        </div> 
+                        </div>
+                        
+                        <div class="login100-form">
+                          <label for="days">Days:</label>
+                          <input type="number" class="input100" name="days" id="days" placeholder="Days" min="1" required>
+                        </div>
                         
                         <div class="login100-form">
                           <label for="endDate">End Date:</label>
-                          <input type="date" class="input100" name="endDate" id="endDate" placeholder="End Date"  required>
+                          <input type="text" class="input100" name="endDate" id="endDate" placeholder="End Date" readonly>
                         </div>
                         <div class="login100-form">
                           <label for="qualifications">Qualifications</label>
                           <input type="textarea" class="input100" id="qualifications" name="qualifications" placeholder="Qualifications" required>
                         </div>
+                        <div class="login100-form">
+                          <label for="duties">Duties and Responsibilities</label>
+                          <textarea rows="5" cols="70" class="input100" id="qualifications" name="duties" placeholder="duties" required></textarea>
+                        </div>
                          <br>
                         <center>
-                            <button type="submit" class="login100-form-btn">Next</button>
+                            <button type="submit" class="login100-form-btn">add vacancy</button>
                         </center>
                     </form>
                     <br>
                         <center>
-                            <a href="home.jsp">
+                            <a href="hrUI.jsp">
                                 <button type="submit" class="login100-form-btn">Cancel Registration</button>
                             </a>
                         </center>
@@ -137,6 +146,7 @@ document.getElementById('department_select').addEventListener("change", function
 
        });           
 </script>
+<!--
 <script>
       const picker1=document.getElementById('endDate');
       picker1.addEventListener('input', function(e){
@@ -149,6 +159,26 @@ document.getElementById('department_select').addEventListener("change", function
            }       
 
        });           
+</script>
+-->
+<script>
+    document.getElementById("days").addEventListener("change", function(){
+    var startDate=document.getElementById("startDate").value;
+    var days=document.getElementById("days").value;
+    var date1=new Date(startDate);
+var diff=days*(1000*3600*24);
+var diff2=date1.getTime()+diff;
+document.getElementById("endDate").value= new Date(diff2).toISOString().split('T')[0];
+ })
+ ||
+ document.getElementById("startDate").addEventListener("change", function(){
+    var startDate=document.getElementById("startDate").value;
+    var days=document.getElementById("days").value;
+    var date1=new Date(startDate);
+var diff=days*(1000*3600*24);
+var diff2=date1.getTime()+diff;
+document.getElementById("endDate").value= new Date(diff2).toISOString().split('T')[0];
+ });
 </script>
 
     </body>

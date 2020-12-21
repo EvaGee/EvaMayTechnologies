@@ -17,19 +17,21 @@ public class Vacancies {
     private String endDate;
     private String startDate;
     private String qualifications;
+    private String duties;
     
      public Vacancies(){
     }
 
     public Vacancies(String department, String section, String type, String title, String qualifications,
-                  String startDate, String endDate){
+                  String startDate, String endDate, String duties){
         this.department=department;
         this.section=section;
         this.type=type;
         this.title=title;
         this.qualifications=qualifications;
         this.startDate=startDate;
-        this.endDate=endDate;    
+        this.endDate=endDate; 
+        this.duties=duties;
     }
 
     /**
@@ -128,6 +130,20 @@ public class Vacancies {
      */
     public void setQualifications(String qualifications) {
         this.qualifications = qualifications;
+    }
+
+    /**
+     * @return the duties
+     */
+    public String getDuties() {
+        return duties;
+    }
+
+    /**
+     * @param duties the duties to set
+     */
+    public void setDuties(String duties) {
+        this.duties = duties;
     }
     
 }

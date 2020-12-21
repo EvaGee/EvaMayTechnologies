@@ -1,4 +1,8 @@
-   <%@page import="java.sql.DriverManager"%>
+   <%@page import="java.time.LocalDate"%>
+<%@page import="java.text.ParseException"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -53,7 +57,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="newlogin.jsp">Login</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">+254742098588</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">+254742098588</a>
           </li>
         </ul>
       </div>
@@ -127,6 +131,19 @@
                         rs=st.executeQuery();
                         
                         while(rs.next()){
+                            String eDate=rs.getString("end");
+                            SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date_d=null;
+        LocalDate today_l = LocalDate.now();
+        Date today = java.sql.Date.valueOf(today_l);
+        
+        try {
+                date_d = sdformat.parse(eDate);
+                } 
+        catch (ParseException ex) {
+                 System.out.println("error parsing it");   
+                }
+        if(date_d.compareTo(today)>=0){
                    
                    %>
                    
@@ -140,13 +157,15 @@
                     <input type="hidden" name="type" value="<%=rs.getString("type")%>">
                     <input type="hidden" name="title" value="<%=rs.getString("title")%>">
                     <input type="hidden" name="start" value="<%=rs.getString("start")%>">
-                    <input type="hidden" name="end" value="<%=rs.getString("end")%>">
+                    <input type="hidden" name="end" value="<%=rs.getString("end")%>">                    
+                    <input type="hidden" name="duties" value="<%=rs.getString("duties")%>">
                     <input type="hidden" name="qualifications" value="<%=rs.getString("qualifications")%>">
                     <td><button>Apply now</button></td>
                 </form>
                 
                   </tr>
                   <%
+        }
                         }
            
             %>

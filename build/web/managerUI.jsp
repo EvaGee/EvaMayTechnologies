@@ -113,10 +113,8 @@
         </a>
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-             <a class="collapse-item" href="appliedLeaves.jsp">Add Job Vacancies </a>  
-            <a class="collapse-item" href="allowedLeaves.jsp">Allowed Leaves</a>
-            <a class="collapse-item" href="pendingLeaves.jsp">Pending Leaves</a>
-            <a class="collapse-item" href="leaveapplication.jsp">Apply A Leave</a>
+             <a class="collapse-item" href="jobvacancy.jsp">Add Job Vacancies </a>  
+            
           </div>
         </div>
       </li>

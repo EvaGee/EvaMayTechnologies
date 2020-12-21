@@ -21,8 +21,8 @@ public class VacanciesIO {
         String dbName = "employee"; 
         String dbUsername = "root"; 
         String dbPassword = "";
-        String sql="INSERT INTO jobvacancies(department, section, title, type, start, end, qualifications)"
-                                    + "VALUES(?,?,?,?,?,?,?)";
+        String sql="INSERT INTO jobvacancies(department, section, title, type, start, end, qualifications, duties)"
+                                    + "VALUES(?,?,?,?,?,?,?,?)";
         Class.forName("com.mysql.jdbc.Driver");
          try (Connection con = DriverManager.getConnection(dbURL + dbName, 
              dbUsername,dbPassword); 
@@ -35,6 +35,7 @@ public class VacanciesIO {
                 st.setString(5, vacancies.getStartDate());
                 st.setString(6, vacancies.getEndDate());
                 st.setString(7, vacancies.getQualifications());
+                st.setString(8, vacancies.getDuties());
 
                 return st.executeUpdate(); 
               }

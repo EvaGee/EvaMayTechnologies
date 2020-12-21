@@ -100,8 +100,9 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Allowed</a>
-            <a class="collapse-item" href="#">Pending</a>
+            <a class="collapse-item" href="allowedLeaves.jsp">Allowed</a>
+            <a class="collapse-item" href="pendingLeaves.jsp">Pending</a>
+            <a class="collapse-item" href="deniedLeaves.jsp">Denied</a>
             <a class="collapse-item" href="leaveapplication.jsp">Apply A Leave</a>
           </div>
         </div>
@@ -112,7 +113,7 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item">
-        <a class="nav-link" href="jobvacancy.jsp">
+        <a class="nav-link" href="home.jsp">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Job Vacancies</span></a>
       </li>

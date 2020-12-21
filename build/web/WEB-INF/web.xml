@@ -40,6 +40,18 @@
         <servlet-name>AddJobServlet</servlet-name>
         <servlet-class>org.evamay.servlets.AddJobServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddInterviewerServlet</servlet-name>
+        <servlet-class>org.evamay.servlets.AddInterviewerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PortalServlet</servlet-name>
+        <servlet-class>org.evamay.servlets.PortalServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadDocsServlet</servlet-name>
+        <servlet-class>org.evamay.servlets.UploadDocsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -71,6 +83,18 @@
     <servlet-mapping>
         <servlet-name>AddJobServlet</servlet-name>
         <url-pattern>/AddJobServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddInterviewerServlet</servlet-name>
+        <url-pattern>/AddInterviewerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PortalServlet</servlet-name>
+        <url-pattern>/PortalServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadDocsServlet</servlet-name>
+        <url-pattern>/UploadDocsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
